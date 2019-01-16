@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Poke3D
 //
-//  Created by Ray Berry on 09/11/2018.
+//  Created by James and Ray Berry on 09/11/2018.
 //  Copyright © 2018 JARBerry. All rights reserved.
 //
 
@@ -72,9 +72,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             node.addChildNode(planeNode)
         
+            // if the code detects the eevee card then it will display the eevee model on to the card
             if imageAnchor.referenceImage.name == "eevee-card" {
             
             if let pokeScene = SCNScene(named: "art.scnassets/eevee.scn") {
+    
+
                 if let pokeNode = pokeScene.rootNode.childNodes.first {
                     
                     pokeNode.eulerAngles.x = .pi / 2
@@ -83,6 +86,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 }
             }
             }
+            
+            // if the code detects the oddish card then it will display the oddish model on to the card
             if imageAnchor.referenceImage.name == "oddish-card" {
                 
                 if let pokeScene = SCNScene(named: "art.scnassets/oddish.scn") {
